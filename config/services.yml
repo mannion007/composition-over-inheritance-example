@@ -1,0 +1,14 @@
+services:
+    
+    tank:
+        class: Tank\Tank
+        arguments: ['@railgun', '@standard-track']
+    
+    railgun:
+        class: Tank\Gun\RailGun
+
+    cannon:
+        class: Tank\Gun\Cannon
+
+    standard-track:
+        class: Tank\Track\StandardTrack

@@ -1,0 +1,13 @@
+{
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/dependency-injection": "^3.1",
+        "symfony/yaml": "^3.1",
+        "symfony/config": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+        "Tank\\": "src/"
+        }
+    }
+}
