@@ -1,9 +1,20 @@
 <?php
+/**
+ * @author James Mannion <mannion007@gmail.com>
+ * @link https://www.jamse.net
+ */
 
 namespace Tank\Gun;
 
 interface GunInterface
 {
-    public function shoot();
-    public function getRoundSize();
+    /**
+     * @return int
+     */
+    public function shoot() : int;
+
+    /**
+     * @return int
+     */
+    public function getRoundSize() : int;
 }

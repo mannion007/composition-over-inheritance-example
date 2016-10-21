@@ -6,24 +6,24 @@
 
 namespace Tank\Gun;
 
-class RailGun implements GunInterface
+class LightCannon implements GunInterface
 {
-    private $roundSize = 50;
+    private $roundSize = 1;
 
     /**
      * @return int
      */
     public function shoot() : int
     {
-        echo 'ZAPPP!!!';
+        echo 'Bang!!!';
         return $this->roundSize;
     }
 
     /**
      * @return int
      */
-    public function getRoundSize(): int
+    public function getRoundSize() : int
     {
-        return $this->roundSize;
+        return 1;
     }
 }

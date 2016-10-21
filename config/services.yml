@@ -1,14 +1,31 @@
 services:
     
-    tank:
-        class: Tank\Tank
-        arguments: ['@railgun', '@standard-track']
+    standard-tank:
+      class: Tank\Tank
+      arguments: ['@light-cannon', '@standard-track']
+
+    heavy-tank:
+      class: Tank\Tank
+      arguments: ['@heavy-cannon', '@super-heavy-duty-track']
+
+    hyper-tank:
+      class: Tank\Tank
+      arguments: ['@railgun', '@anti-gravity-track']
     
     railgun:
-        class: Tank\Gun\RailGun
+      class: Tank\Gun\RailGun
 
-    cannon:
-        class: Tank\Gun\Cannon
+    light-cannon:
+      class: Tank\Gun\LightCannon
+
+    heavy-cannon:
+        class: Tank\Gun\HeavyCannon
 
     standard-track:
-        class: Tank\Track\StandardTrack
+      class: Tank\Track\StandardTrack
+
+    super-heavy-duty-track:
+        class: Tank\Track\SuperHeavyDutyTrack
+
+    anti-gravity-track:
+      class: Tank\Track\AntiGravityTrack

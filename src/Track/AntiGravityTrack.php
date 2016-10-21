@@ -6,11 +6,11 @@
 
 namespace Tank\Track;
 
-class StandardTrack implements TrackInterface
+class AntiGravityTrack implements TrackInterface
 {
     public function drive() : int
     {
-        echo 'Rattle Rattle Rattle' . PHP_EOL;
-        return 10;
+        echo 'Whoosh' . PHP_EOL;
+        return 20;
     }
 }
