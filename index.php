@@ -1,28 +1,23 @@
 <?php
 
-/** Composer autolaoder */
+/** Composer autoload */
 require_once('vendor/autoload.php');
 
-use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\Config\FileLocator;
-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Tank\Tank;
+use Tank\Gun\LightCannon;
+use Tank\Gun\HeavyCannon;
+use Tank\Gun\RailGun;
+use Tank\Track\StandardTrack;
+use Tank\Track\SuperHeavyDutyTrack;
 
-/** Register dependency injection */
-$container = new ContainerBuilder();
-$loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/config'));
-$loader->load('services.yml');
+$standardTank = new Tank(new LightCannon(), new StandardTrack());
+$standardTank->shoot();
+$standardTank->drive();
 
-echo 'Standard Tank' . PHP_EOL;
-$standard = $container->get('standard-tank');
-$standard->shoot();
-$standard->drive();
+$heavyTank = new Tank(new HeavyCannon(), new SuperHeavyDutyTrack());
+$heavyTank->shoot();
+$heavyTank->drive();
 
-echo PHP_EOL . 'Heavy Tank' . PHP_EOL;
-$heavy = $container->get('heavy-tank');
-$heavy->shoot();
-$heavy->drive();
-
-echo PHP_EOL . 'Hyper Tank' . PHP_EOL;
-$hyper = $container->get('hyper-tank');
-$hyper->shoot();
-$hyper->drive();
+$terminatorTank = new Tank(new RailGun(), new SuperHeavyDutyTrack());
+$terminatorTank->shoot();
+$terminatorTank->drive();
