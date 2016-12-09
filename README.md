@@ -1,4 +1,4 @@
-# Composition Over Inheritance Example
+#Composition Over Inheritance Example
 
 A completely pointless PHP application that builds tanks from tracks and guns using composition over inheritance.
 
@@ -13,4 +13,10 @@ php -S localhost:8000
 - Run the script in your browser
 ```
 http://localhost:8000
+```
+
+##Running the code sniffer
+The code sniffer will ensure that the code in the src directory complies to the PSR standard. Before making a pull request, please run this first to ensure no formatting errors have been introduced.
+```
+make phpcs
 ```
